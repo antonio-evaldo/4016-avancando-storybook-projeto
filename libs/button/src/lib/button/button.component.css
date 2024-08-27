@@ -17,6 +17,7 @@ button {
   --ab-quaternary-color: #ecf0ff;
   --ab-hover-color: #1b4af0;
   --ab-click-color: #002ed0;
+  --ab-focus-color: #af4bfe;
 
   --ab-error-bg-color: #fff2f2;
   --ab-error-border-color: #ff3030;
@@ -33,9 +34,7 @@ button {
   line-height: 1.5rem;
   letter-spacing: 0.02em;
   text-align: center;
-  transition:
-    color 0.3s,
-    background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 button:disabled {
@@ -43,7 +42,7 @@ button:disabled {
 }
 
 button:focus {
-  outline-color: var(--ab-color-focus, #af4bfe);
+  outline-color: var(--ab-focus-color);
 }
 
 button.primary:hover {
