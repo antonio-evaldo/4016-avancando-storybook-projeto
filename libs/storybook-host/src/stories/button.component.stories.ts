@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/angular";
-import { ButtonComponent } from "@alfabit-alura/button";
+import type { Meta, StoryObj } from '@storybook/angular';
+import { ButtonComponent } from '@alfabit-alura/button';
 
 const meta: Meta<ButtonComponent> = {
-  component: ButtonComponent
-}
+  component: ButtonComponent,
+};
 
 export default meta;
 
@@ -14,84 +14,84 @@ export const PrimaryButton: Story = {
     text: 'Action',
     variant: 'primary',
     disabled: false,
-    theme: 'blue'
-  }
+    theme: 'blue',
+  },
 };
 
 export const PrimaryButtonDisabled: Story = {
   args: {
     ...PrimaryButton.args,
-    disabled: true
-  }
+    disabled: true,
+  },
 };
 
 export const SecondaryButton: Story = {
   args: {
     ...PrimaryButton.args,
     variant: 'secondary',
-    disabled: false
-  }
+    disabled: false,
+  },
 };
 
 export const SecondaryButtonDisabled: Story = {
   args: {
     ...SecondaryButton.args,
-    disabled: true
-  }
+    disabled: true,
+  },
 };
 
 export const TertiaryButton: Story = {
   args: {
     ...PrimaryButton.args,
-    variant: 'tertiary'
-  }
-}
+    variant: 'tertiary',
+  },
+};
 
 export const TertiaryButtonDisabled: Story = {
   args: {
     ...TertiaryButton.args,
-    disabled: true
-  }
-}
+    disabled: true,
+  },
+};
 
 export const PrimaryButtonViolet: Story = {
   args: {
     ...PrimaryButton.args,
-    theme: 'violet'
-  }
+    theme: 'violet',
+  },
 };
 
 export const PrimaryButtonDisabledViolet: Story = {
   args: {
     ...PrimaryButtonDisabled.args,
-    theme: 'violet'
-  }
+    theme: 'violet',
+  },
 };
 
 export const SecondaryButtonViolet: Story = {
   args: {
     ...SecondaryButton.args,
-    theme: 'violet'
-  }
+    theme: 'violet',
+  },
 };
 
 export const SecondaryButtonDisabledViolet: Story = {
   args: {
     ...SecondaryButtonDisabled.args,
-    theme: 'violet'
-  }
-}
+    theme: 'violet',
+  },
+};
 
 export const TertiaryButtonViolet: Story = {
   args: {
     ...TertiaryButton.args,
-    theme: 'violet'
-  }
-}
+    theme: 'violet',
+  },
+};
 
 export const TertiaryButtonDisabledViolet: Story = {
   args: {
     ...TertiaryButtonDisabled.args,
-    theme: 'violet'
-  }
-}
+    theme: 'violet',
+  },
+};

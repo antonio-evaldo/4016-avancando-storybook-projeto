@@ -1,4 +1,3 @@
-
 ![Imagem de capa do curso "Angular: construa um Design System com Nx e Storybook", que faz parte da formação "Angular Design System". O logotipo do GitHub e o nome "/alura-cursos" estão no canto superior esquerdo, e o logotipo da Alura no canto superior direito. Na parte inferior direita, há uma indicação de que o curso faz parte da trilha de Front-end.](./thumb.png)
 
 # Design System da Alfabit
@@ -17,8 +16,7 @@ Acesse o [Figma do Design System](https://www.figma.com/community/file/140231500
 
 As técnicas e tecnologias utilizadas pra isso são:
 
-- **Design System e Atomic Design**: criados pela equipe de design para
-organizar o Design System da empresa
+- **Design System e Atomic Design**: criados pela equipe de design para organizar o Design System da empresa
 - **Angular**: framework utilizado para implementação dos componentes
 - **Nx e monorepo**: utilizados para criar e gerenciar aplicações e bibliotecas de forma produtiva
 - **Storybook**: ferramenta para criação de documentação interativa
