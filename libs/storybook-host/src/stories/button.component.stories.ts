@@ -29,7 +29,6 @@ export const SecondaryButton: Story = {
   args: {
     ...PrimaryButton.args,
     variant: 'secondary',
-    disabled: false,
   },
 };
 
