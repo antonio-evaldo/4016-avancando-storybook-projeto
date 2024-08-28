@@ -10,9 +10,9 @@ input {
 
   border-radius: 0.5rem;
   border: 0;
-  background: var(--ab-inputs);
+  background: var(--ab-inputs, #f8f8f8);
 
-  color: var(--ab-primary-text-color);
+  color: var(--ab-primary-text-color, #181818);
   font-family: sans-serif;
   font-size: 0.875rem;
   font-style: normal;
@@ -25,13 +25,13 @@ input:disabled {
 }
 
 input::placeholder {
-  color: var(--ab-secondary-text-color);
+  color: var(--ab-secondary-text-color, #5c5c5c);
 }
 
 input:hover {
-  outline: 1px solid var(--ab-hover-color);
+  outline: 1px solid var(--ab-hover-color, #1b4af0);
 }
 
 input:focus {
-  outline: 1px solid var(--ab-focus-color);
+  outline: 1px solid var(--ab-focus-color, #af4bfe);
 }
