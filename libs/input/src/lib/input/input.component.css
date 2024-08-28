@@ -1,4 +1,4 @@
-input {
+.input {
   box-sizing: border-box;
   display: flex;
   width: 15.625rem;
@@ -20,18 +20,18 @@ input {
   line-height: 1.125rem;
 }
 
-input:disabled {
+.input:disabled {
   cursor: not-allowed;
 }
 
-input::placeholder {
+.input::placeholder {
   color: var(--ab-secondary-text-color, #5c5c5c);
 }
 
-input:hover {
+.input:hover {
   outline: 1px solid var(--ab-hover-color, #1b4af0);
 }
 
-input:focus {
+.input:focus {
   outline: 1px solid var(--ab-focus-color, #af4bfe);
 }

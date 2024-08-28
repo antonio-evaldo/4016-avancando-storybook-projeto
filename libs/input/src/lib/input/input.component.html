@@ -1,1 +1,9 @@
-<input type="text" placeholder="Text" />
+@if (!multiline) {
+
+<input type="text" class="input" placeholder="Text" />
+
+} @else {
+
+<textarea class="input" placeholder="Text"></textarea>
+
+}
