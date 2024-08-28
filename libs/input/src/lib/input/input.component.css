@@ -35,3 +35,8 @@
 .input:focus {
   outline: 1px solid var(--ab-focus-color, #af4bfe);
 }
+
+.input:disabled {
+  outline: 1px solid var(--ab-disabled-text, #8a8a8a);
+  background: var(--ab-disabled-bg, #efefef);
+}
