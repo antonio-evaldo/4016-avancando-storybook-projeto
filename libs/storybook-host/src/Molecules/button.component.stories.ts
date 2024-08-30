@@ -3,7 +3,6 @@ import { ButtonComponent } from '@alfabit-alura/button';
 
 const meta: Meta<ButtonComponent> = {
   component: ButtonComponent,
-  title: 'Button',
 };
 
 export default meta;

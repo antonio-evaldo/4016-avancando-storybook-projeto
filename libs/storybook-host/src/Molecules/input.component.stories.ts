@@ -3,7 +3,7 @@ import { InputComponent } from '@alfabit-alura/input';
 
 const meta: Meta<InputComponent> = {
   component: InputComponent,
-  title: 'Input',
+  tags: ['autodocs'],
 };
 
 export default meta;

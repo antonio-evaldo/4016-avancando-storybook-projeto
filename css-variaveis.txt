@@ -1,3 +1,6 @@
+  --ab-bg-light: var(--ab-white);
+  --ab-bg-gray: #f8f8f8;
+
   --ab-primary-text-color: #181818;
   --ab-secondary-text-color: #5c5c5c;
   --ab-tertiary-text-color: #747474;
