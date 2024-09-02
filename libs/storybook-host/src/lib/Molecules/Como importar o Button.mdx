@@ -1,0 +1,21 @@
+import { Meta, Source, Canvas } from '@storybook/blocks';
+
+import * as ButtonStories from './button.component.stories';
+
+<Meta of={ButtonStories} />
+
+# Importando o componente Button
+
+Importe o botão da seguinte forma no seu projeto:
+
+```ts
+import { ButtonComponent } from '@alfabit-alura/button';
+```
+
+Este é o código Angular para utilizar no template:
+
+<Source of={ButtonStories.PrimaryButton} />
+
+E ele deve ser renderizado por padrão dessa forma:
+
+<Canvas of={ButtonStories.PrimaryButton} layout="centered" sourceState="none" />
