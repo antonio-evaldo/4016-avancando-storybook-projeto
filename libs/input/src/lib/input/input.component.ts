@@ -11,4 +11,16 @@ import { CommonModule } from '@angular/common';
 export class InputComponent {
   @Input() multiline = false;
   @Input() disabled = false;
+  @Input() label = '';
+  @Input() id = '';
+
+  getInputContainerClasses(): string {
+    let classes = 'input-container';
+
+    if (this.label) {
+      classes += ' with-label';
+    }
+
+    return classes;
+  }
 }
