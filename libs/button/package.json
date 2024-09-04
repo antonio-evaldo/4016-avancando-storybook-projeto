@@ -1,5 +1,5 @@
 {
-  "name": "@alfabit-alura/button",
+  "name": "@alfabit-alura-teste/button",
   "version": "0.1.1",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
