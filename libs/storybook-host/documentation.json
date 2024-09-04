@@ -1,0 +1,1025 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-90ace9afc2b7798d1cd783c19e9f583695957d43edc98c5e898bd4bb12f1af451f2b636fe6c54448cbfadcb0e04a4074a7d808825a31dfe5337e3aba9ab391e2",
+            "file": "libs/button/src/lib/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ab-button",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "text",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nTexto do botão.\n",
+                    "description": "<p>Texto do botão.</p>\n",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "theme",
+                    "defaultValue": "'blue'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "Theme",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "Variant",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "getClasses",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\ntype Variant = 'primary' | 'secondary' | 'tertiary';\ntype Theme = 'blue' | 'violet';\n\n@Component({\n  selector: 'ab-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrl: './button.component.css',\n})\nexport class ButtonComponent {\n  /**\n   * Texto do botão.\n   */\n  @Input() text = '';\n  @Input() variant: Variant = 'primary';\n  @Input() disabled = false;\n  @Input() theme: Theme = 'blue';\n\n  getClasses(): string {\n    return `${this.variant} ${this.theme}`;\n  }\n}\n",
+            "styleUrl": "./button.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<button [class]=\"getClasses()\" [disabled]=\"disabled\">\r\n  {{ text }}\r\n</button>\r\n"
+        },
+        {
+            "name": "InputComponent",
+            "id": "component-InputComponent-fd3173b106d97604c34c1e7ac48e0f2ad0bcf57a1e28854caeb2bd1e83e53313fcdbb44cbfef532be4a96a786d1ad096d66d13955bb5547b3b89ce3f3187bdbe",
+            "file": "libs/input/src/lib/input/input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ab-input",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./input.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "multiline",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "getInputContainerClasses",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ab-input',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './input.component.html',\n  styleUrl: './input.component.css',\n})\nexport class InputComponent {\n  @Input() multiline = false;\n  @Input() disabled = false;\n  @Input() label = '';\n  @Input() id = '';\n\n  getInputContainerClasses(): string {\n    let classes = 'input-container';\n\n    if (this.label) {\n      classes += ' with-label';\n    }\n\n    return classes;\n  }\n}\n",
+            "styleUrl": "./input.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div [class]=\"getInputContainerClasses()\">\r\n  \r\n  @if (label) {\r\n    <label [for]=\"id\" class=\"label\">{{ label }}</label>\r\n  }\r\n  \r\n  @if (!multiline) {\r\n  \r\n    <input [id]=\"id\" type=\"text\" class=\"input\" placeholder=\"Text\" [disabled]=\"disabled\" />\r\n  \r\n  } @else {\r\n  \r\n    <textarea [id]=\"id\" class=\"input\" placeholder=\"Text\" [disabled]=\"disabled\"></textarea>\r\n  \r\n  }\r\n\r\n</div>\r\n"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "config",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/.storybook/main.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StorybookConfig",
+                "defaultValue": "{\n  stories: [\n    '../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',\n    '../src/lib/**/*.mdx',\n  ],\n  addons: ['@storybook/addon-essentials'],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ButtonComponent>",
+                "defaultValue": "{\n  component: ButtonComponent,\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<InputComponent>",
+                "defaultValue": "{\n  component: InputComponent,\n}"
+            },
+            {
+                "name": "Multiline",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    multiline: true,\n  },\n}"
+            },
+            {
+                "name": "MultilineDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    disabled: true,\n  },\n}"
+            },
+            {
+                "name": "MultilineDisabledWithLabel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    label: 'Label 4',\n    id: '4',\n    disabled: true,\n  },\n}"
+            },
+            {
+                "name": "MultilineWithLabel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    label: 'Label 3',\n    id: '3',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    multiline: false,\n    disabled: false,\n    label: '',\n    id: '',\n  },\n}"
+            },
+            {
+                "name": "PrimaryButton",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    text: 'Action',\n    variant: 'primary',\n    disabled: false,\n    theme: 'blue',\n  },\n}"
+            },
+            {
+                "name": "PrimaryButtonDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    disabled: true,\n  },\n}"
+            },
+            {
+                "name": "PrimaryButtonDisabledViolet",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...PrimaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+            },
+            {
+                "name": "PrimaryButtonViolet",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    theme: 'violet',\n  },\n}"
+            },
+            {
+                "name": "PrimaryDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    disabled: true,\n  },\n}"
+            },
+            {
+                "name": "PrimaryDisabledWithLabel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    label: 'Label 2',\n    id: '2',\n    disabled: true,\n  },\n}"
+            },
+            {
+                "name": "PrimaryWithLabel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    label: 'Label',\n    id: '1',\n  },\n}"
+            },
+            {
+                "name": "SecondaryButton",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    variant: 'secondary',\n  },\n}"
+            },
+            {
+                "name": "SecondaryButtonDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...SecondaryButton.args,\n    disabled: true,\n  },\n}"
+            },
+            {
+                "name": "SecondaryButtonDisabledViolet",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...SecondaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+            },
+            {
+                "name": "SecondaryButtonViolet",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...SecondaryButton.args,\n    theme: 'violet',\n  },\n}"
+            },
+            {
+                "name": "TertiaryButton",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    variant: 'tertiary',\n  },\n}"
+            },
+            {
+                "name": "TertiaryButtonDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...TertiaryButton.args,\n    disabled: true,\n  },\n}"
+            },
+            {
+                "name": "TertiaryButtonDisabledViolet",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...TertiaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+            },
+            {
+                "name": "TertiaryButtonViolet",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...TertiaryButton.args,\n    theme: 'violet',\n  },\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ButtonComponent>",
+                "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<InputComponent>",
+                "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Theme",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"blue\" | \"violet\"",
+                "file": "libs/button/src/lib/button/button.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 192
+            },
+            {
+                "name": "Variant",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"primary\" | \"secondary\" | \"tertiary\"",
+                "file": "libs/button/src/lib/button/button.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 192
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "libs/storybook-host/.storybook/main.ts": [
+                {
+                    "name": "config",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/.storybook/main.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StorybookConfig",
+                    "defaultValue": "{\n  stories: [\n    '../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',\n    '../src/lib/**/*.mdx',\n  ],\n  addons: ['@storybook/addon-essentials'],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n  },\n}"
+                }
+            ],
+            "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ButtonComponent>",
+                    "defaultValue": "{\n  component: ButtonComponent,\n}"
+                },
+                {
+                    "name": "PrimaryButton",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    text: 'Action',\n    variant: 'primary',\n    disabled: false,\n    theme: 'blue',\n  },\n}"
+                },
+                {
+                    "name": "PrimaryButtonDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    disabled: true,\n  },\n}"
+                },
+                {
+                    "name": "PrimaryButtonDisabledViolet",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...PrimaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                },
+                {
+                    "name": "PrimaryButtonViolet",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    theme: 'violet',\n  },\n}"
+                },
+                {
+                    "name": "SecondaryButton",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    variant: 'secondary',\n  },\n}"
+                },
+                {
+                    "name": "SecondaryButtonDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...SecondaryButton.args,\n    disabled: true,\n  },\n}"
+                },
+                {
+                    "name": "SecondaryButtonDisabledViolet",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...SecondaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                },
+                {
+                    "name": "SecondaryButtonViolet",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...SecondaryButton.args,\n    theme: 'violet',\n  },\n}"
+                },
+                {
+                    "name": "TertiaryButton",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    variant: 'tertiary',\n  },\n}"
+                },
+                {
+                    "name": "TertiaryButtonDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...TertiaryButton.args,\n    disabled: true,\n  },\n}"
+                },
+                {
+                    "name": "TertiaryButtonDisabledViolet",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...TertiaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                },
+                {
+                    "name": "TertiaryButtonViolet",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...TertiaryButton.args,\n    theme: 'violet',\n  },\n}"
+                }
+            ],
+            "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<InputComponent>",
+                    "defaultValue": "{\n  component: InputComponent,\n}"
+                },
+                {
+                    "name": "Multiline",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    multiline: true,\n  },\n}"
+                },
+                {
+                    "name": "MultilineDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    disabled: true,\n  },\n}"
+                },
+                {
+                    "name": "MultilineDisabledWithLabel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    label: 'Label 4',\n    id: '4',\n    disabled: true,\n  },\n}"
+                },
+                {
+                    "name": "MultilineWithLabel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    label: 'Label 3',\n    id: '3',\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    multiline: false,\n    disabled: false,\n    label: '',\n    id: '',\n  },\n}"
+                },
+                {
+                    "name": "PrimaryDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    disabled: true,\n  },\n}"
+                },
+                {
+                    "name": "PrimaryDisabledWithLabel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    label: 'Label 2',\n    id: '2',\n    disabled: true,\n  },\n}"
+                },
+                {
+                    "name": "PrimaryWithLabel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    label: 'Label',\n    id: '1',\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ButtonComponent>",
+                    "file": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<InputComponent>",
+                    "file": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "libs/button/src/lib/button/button.component.ts": [
+                {
+                    "name": "Theme",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"blue\" | \"violet\"",
+                    "file": "libs/button/src/lib/button/button.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 192
+                },
+                {
+                    "name": "Variant",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"primary\" | \"secondary\" | \"tertiary\"",
+                    "file": "libs/button/src/lib/button/button.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 192
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "libs/button/src/lib/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 16,
+                "coverageCount": "1/6",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/input/src/lib/input/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/.storybook/main.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "config",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimaryButton",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimaryButtonDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimaryButtonDisabledViolet",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimaryButtonViolet",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SecondaryButton",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SecondaryButtonDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SecondaryButtonDisabledViolet",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SecondaryButtonViolet",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TertiaryButton",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TertiaryButtonDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TertiaryButtonDisabledViolet",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TertiaryButtonViolet",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Multiline",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MultilineDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MultilineDisabledWithLabel",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MultilineWithLabel",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimaryDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimaryDisabledWithLabel",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimaryWithLabel",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
