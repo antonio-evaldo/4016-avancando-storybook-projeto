@@ -83,7 +83,7 @@
     }
   },
   "release": {
-    "projects": ["libs/button", "libs/input"],
+    "projects": ["libs/ui/*"],
     "version": {
       "conventionalCommits": true
     }
