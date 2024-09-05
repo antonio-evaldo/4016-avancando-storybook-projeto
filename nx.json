@@ -83,6 +83,9 @@
     }
   },
   "release": {
-    "projects": ["libs/button", "libs/input"]
+    "projects": ["libs/button", "libs/input"],
+    "version": {
+      "conventionalCommits": true
+    }
   }
 }

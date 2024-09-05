@@ -16,6 +16,10 @@ export class ButtonComponent {
    * Texto do botão.
    */
   @Input() text = '';
+
+  /**
+   * Variante do botão.
+   */
   @Input() variant: Variant = 'primary';
   @Input() disabled = false;
   @Input() theme: Theme = 'blue';
