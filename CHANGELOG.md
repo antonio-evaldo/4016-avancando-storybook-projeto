@@ -1,3 +1,14 @@
+## 2.2.0 (2024-09-05)
+
+
+### 🚀 Features
+
+- **button:** adiciona JSDoc ao botão ([147103b](https://github.com/antonio-evaldo/4016-avancando-storybook-projeto/commit/147103b))
+
+### ❤️  Thank You
+
+- Antônio Evaldo @antonio-evaldo
+
 ## 2.1.0 (2024-09-05)
 
 
