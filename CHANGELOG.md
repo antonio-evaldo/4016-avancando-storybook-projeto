@@ -1,3 +1,14 @@
+## 2.1.0 (2024-09-05)
+
+
+### 🚀 Features
+
+- **input:** adiciona JSDoc para input ([3285d2c](https://github.com/antonio-evaldo/4016-avancando-storybook-projeto/commit/3285d2c))
+
+### ❤️  Thank You
+
+- Antônio Evaldo @antonio-evaldo
+
 # 2.0.0 (2024-09-04)
 
 This was a version bump only, there were no code changes.
