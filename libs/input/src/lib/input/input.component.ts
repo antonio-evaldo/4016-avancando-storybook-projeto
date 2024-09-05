@@ -12,6 +12,10 @@ export class InputComponent {
   @Input() multiline = false;
   @Input() disabled = false;
   @Input() label = '';
+
+  /**
+   * Forneça um id único para cada input.
+   */
   @Input() id = '';
 
   getInputContainerClasses(): string {
