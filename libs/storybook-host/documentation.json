@@ -9,8 +9,8 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-90ace9afc2b7798d1cd783c19e9f583695957d43edc98c5e898bd4bb12f1af451f2b636fe6c54448cbfadcb0e04a4074a7d808825a31dfe5337e3aba9ab391e2",
-            "file": "libs/button/src/lib/button/button.component.ts",
+            "id": "component-ButtonComponent-4ec1ff30043f338b37c047cde3dba6cfbd3d9dcd5004e7b114d8a3c40c7bd94ee7748fe60ddf5378b4d64b7f528620224743846af681c60f64e91cc35535afb6",
+            "file": "libs/ui/button/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -30,7 +30,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 20,
+                    "line": 24,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -50,7 +50,7 @@
                     "defaultValue": "'blue'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 25,
                     "type": "Theme",
                     "decorators": []
                 },
@@ -59,7 +59,9 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "rawdescription": "\n\nVariante do botão.\n",
+                    "description": "<p>Variante do botão.</p>\n",
+                    "line": 23,
                     "type": "Variant",
                     "decorators": []
                 }
@@ -73,7 +75,7 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 27,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -92,7 +94,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\ntype Variant = 'primary' | 'secondary' | 'tertiary';\ntype Theme = 'blue' | 'violet';\n\n@Component({\n  selector: 'ab-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrl: './button.component.css',\n})\nexport class ButtonComponent {\n  /**\n   * Texto do botão.\n   */\n  @Input() text = '';\n  @Input() variant: Variant = 'primary';\n  @Input() disabled = false;\n  @Input() theme: Theme = 'blue';\n\n  getClasses(): string {\n    return `${this.variant} ${this.theme}`;\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\ntype Variant = 'primary' | 'secondary' | 'tertiary';\r\ntype Theme = 'blue' | 'violet';\r\n\r\n@Component({\r\n  selector: 'ab-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /**\r\n   * Texto do botão.\r\n   */\r\n  @Input() text = '';\r\n\r\n  /**\r\n   * Variante do botão.\r\n   */\r\n  @Input() variant: Variant = 'primary';\r\n  @Input() disabled = false;\r\n  @Input() theme: Theme = 'blue';\r\n\r\n  getClasses(): string {\r\n    return `${this.variant} ${this.theme}`;\r\n  }\r\n}\r\n",
             "styleUrl": "./button.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -102,8 +104,8 @@
         },
         {
             "name": "InputComponent",
-            "id": "component-InputComponent-fd3173b106d97604c34c1e7ac48e0f2ad0bcf57a1e28854caeb2bd1e83e53313fcdbb44cbfef532be4a96a786d1ad096d66d13955bb5547b3b89ce3f3187bdbe",
-            "file": "libs/input/src/lib/input/input.component.ts",
+            "id": "component-InputComponent-b34cb8afcd4e60e966df7f8ca755adcbe03c8ee81129fd2951416ac4adc7007006b604609b22682a16578f449515415a171e8fe6b5e16b81384c24f268b2aeff",
+            "file": "libs/ui/input/src/lib/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -132,7 +134,9 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
+                    "rawdescription": "\n\nForneça um id único para cada input.\n",
+                    "description": "<p>Forneça um id único para cada input.</p>\n",
+                    "line": 19,
                     "type": "string",
                     "decorators": []
                 },
@@ -164,7 +168,7 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -183,13 +187,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ab-input',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './input.component.html',\n  styleUrl: './input.component.css',\n})\nexport class InputComponent {\n  @Input() multiline = false;\n  @Input() disabled = false;\n  @Input() label = '';\n  @Input() id = '';\n\n  getInputContainerClasses(): string {\n    let classes = 'input-container';\n\n    if (this.label) {\n      classes += ' with-label';\n    }\n\n    return classes;\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ab-input',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './input.component.html',\n  styleUrl: './input.component.css',\n})\nexport class InputComponent {\n  @Input() multiline = false;\n  @Input() disabled = false;\n  @Input() label = '';\n\n  /**\n   * Forneça um id único para cada input.\n   */\n  @Input() id = '';\n\n  getInputContainerClasses(): string {\n    let classes = 'input-container';\n\n    if (this.label) {\n      classes += ' with-label';\n    }\n\n    return classes;\n  }\n}\n",
             "styleUrl": "./input.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div [class]=\"getInputContainerClasses()\">\r\n  \r\n  @if (label) {\r\n    <label [for]=\"id\" class=\"label\">{{ label }}</label>\r\n  }\r\n  \r\n  @if (!multiline) {\r\n  \r\n    <input [id]=\"id\" type=\"text\" class=\"input\" placeholder=\"Text\" [disabled]=\"disabled\" />\r\n  \r\n  } @else {\r\n  \r\n    <textarea [id]=\"id\" class=\"input\" placeholder=\"Text\" [disabled]=\"disabled\"></textarea>\r\n  \r\n  }\r\n\r\n</div>\r\n"
+            "templateData": "<div [class]=\"getInputContainerClasses()\">\n  @if (label) {\n  <label [for]=\"id\" class=\"label\">{{ label }}</label>\n  } @if (!multiline) {\n\n  <input\n    [id]=\"id\"\n    type=\"text\"\n    class=\"input\"\n    placeholder=\"Text\"\n    [disabled]=\"disabled\"\n  />\n\n  } @else {\n\n  <textarea\n    [id]=\"id\"\n    class=\"input\"\n    placeholder=\"Text\"\n    [disabled]=\"disabled\"\n  ></textarea>\n\n  }\n</div>\n"
         }
     ],
     "modules": [],
@@ -203,7 +207,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StorybookConfig",
-                "defaultValue": "{\n  stories: [\n    '../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',\n    '../src/lib/**/*.mdx',\n  ],\n  addons: ['@storybook/addon-essentials'],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n  },\n}"
+                "defaultValue": "{\r\n  stories: [\r\n    '../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',\r\n    '../src/lib/**/*.mdx',\r\n  ],\r\n  addons: ['@storybook/addon-essentials'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: true,\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -213,7 +217,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  component: ButtonComponent,\n}"
+                "defaultValue": "{\r\n  component: ButtonComponent,\r\n}"
             },
             {
                 "name": "meta",
@@ -223,7 +227,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<InputComponent>",
-                "defaultValue": "{\n  component: InputComponent,\n}"
+                "defaultValue": "{\r\n  component: InputComponent,\r\n}"
             },
             {
                 "name": "Multiline",
@@ -233,7 +237,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    multiline: true,\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...Primary.args,\r\n    multiline: true,\r\n  },\r\n}"
             },
             {
                 "name": "MultilineDisabled",
@@ -243,7 +247,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    disabled: true,\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...Multiline.args,\r\n    disabled: true,\r\n  },\r\n}"
             },
             {
                 "name": "MultilineDisabledWithLabel",
@@ -253,7 +257,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    label: 'Label 4',\n    id: '4',\n    disabled: true,\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...Multiline.args,\r\n    label: 'Label 4',\r\n    id: '4',\r\n    disabled: true,\r\n  },\r\n}"
             },
             {
                 "name": "MultilineWithLabel",
@@ -263,7 +267,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    label: 'Label 3',\n    id: '3',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...Multiline.args,\r\n    label: 'Label 3',\r\n    id: '3',\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -273,7 +277,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    multiline: false,\n    disabled: false,\n    label: '',\n    id: '',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    multiline: false,\r\n    disabled: false,\r\n    label: '',\r\n    id: '',\r\n  },\r\n}"
             },
             {
                 "name": "PrimaryButton",
@@ -283,7 +287,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    text: 'Action',\n    variant: 'primary',\n    disabled: false,\n    theme: 'blue',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    text: 'Action',\r\n    variant: 'primary',\r\n    disabled: false,\r\n    theme: 'blue',\r\n  },\r\n}"
             },
             {
                 "name": "PrimaryButtonDisabled",
@@ -293,7 +297,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    disabled: true,\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButton.args,\r\n    disabled: true,\r\n  },\r\n}"
             },
             {
                 "name": "PrimaryButtonDisabledViolet",
@@ -303,7 +307,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...PrimaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButtonDisabled.args,\r\n    theme: 'violet',\r\n  },\r\n}"
             },
             {
                 "name": "PrimaryButtonViolet",
@@ -313,7 +317,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    theme: 'violet',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButton.args,\r\n    theme: 'violet',\r\n  },\r\n}"
             },
             {
                 "name": "PrimaryDisabled",
@@ -323,7 +327,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    disabled: true,\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...Primary.args,\r\n    disabled: true,\r\n  },\r\n}"
             },
             {
                 "name": "PrimaryDisabledWithLabel",
@@ -333,7 +337,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    label: 'Label 2',\n    id: '2',\n    disabled: true,\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...Primary.args,\r\n    label: 'Label 2',\r\n    id: '2',\r\n    disabled: true,\r\n  },\r\n}"
             },
             {
                 "name": "PrimaryWithLabel",
@@ -343,7 +347,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    label: 'Label',\n    id: '1',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...Primary.args,\r\n    label: 'Label',\r\n    id: '1',\r\n  },\r\n}"
             },
             {
                 "name": "SecondaryButton",
@@ -353,7 +357,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    variant: 'secondary',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButton.args,\r\n    variant: 'secondary',\r\n  },\r\n}"
             },
             {
                 "name": "SecondaryButtonDisabled",
@@ -363,7 +367,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...SecondaryButton.args,\n    disabled: true,\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...SecondaryButton.args,\r\n    disabled: true,\r\n  },\r\n}"
             },
             {
                 "name": "SecondaryButtonDisabledViolet",
@@ -373,7 +377,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...SecondaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...SecondaryButtonDisabled.args,\r\n    theme: 'violet',\r\n  },\r\n}"
             },
             {
                 "name": "SecondaryButtonViolet",
@@ -383,7 +387,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...SecondaryButton.args,\n    theme: 'violet',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...SecondaryButton.args,\r\n    theme: 'violet',\r\n  },\r\n}"
             },
             {
                 "name": "TertiaryButton",
@@ -393,7 +397,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    variant: 'tertiary',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButton.args,\r\n    variant: 'tertiary',\r\n  },\r\n}"
             },
             {
                 "name": "TertiaryButtonDisabled",
@@ -403,7 +407,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...TertiaryButton.args,\n    disabled: true,\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...TertiaryButton.args,\r\n    disabled: true,\r\n  },\r\n}"
             },
             {
                 "name": "TertiaryButtonDisabledViolet",
@@ -413,7 +417,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...TertiaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...TertiaryButtonDisabled.args,\r\n    theme: 'violet',\r\n  },\r\n}"
             },
             {
                 "name": "TertiaryButtonViolet",
@@ -423,7 +427,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    ...TertiaryButton.args,\n    theme: 'violet',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    ...TertiaryButton.args,\r\n    theme: 'violet',\r\n  },\r\n}"
             }
         ],
         "functions": [],
@@ -455,7 +459,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "\"blue\" | \"violet\"",
-                "file": "libs/button/src/lib/button/button.component.ts",
+                "file": "libs/ui/button/src/lib/button/button.component.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -466,7 +470,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "\"primary\" | \"secondary\" | \"tertiary\"",
-                "file": "libs/button/src/lib/button/button.component.ts",
+                "file": "libs/ui/button/src/lib/button/button.component.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -484,7 +488,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StorybookConfig",
-                    "defaultValue": "{\n  stories: [\n    '../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',\n    '../src/lib/**/*.mdx',\n  ],\n  addons: ['@storybook/addon-essentials'],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n  },\n}"
+                    "defaultValue": "{\r\n  stories: [\r\n    '../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)',\r\n    '../src/lib/**/*.mdx',\r\n  ],\r\n  addons: ['@storybook/addon-essentials'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: true,\r\n  },\r\n}"
                 }
             ],
             "libs/storybook-host/src/lib/Molecules/button/button.component.stories.ts": [
@@ -496,7 +500,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  component: ButtonComponent,\n}"
+                    "defaultValue": "{\r\n  component: ButtonComponent,\r\n}"
                 },
                 {
                     "name": "PrimaryButton",
@@ -506,7 +510,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    text: 'Action',\n    variant: 'primary',\n    disabled: false,\n    theme: 'blue',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    text: 'Action',\r\n    variant: 'primary',\r\n    disabled: false,\r\n    theme: 'blue',\r\n  },\r\n}"
                 },
                 {
                     "name": "PrimaryButtonDisabled",
@@ -516,7 +520,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    disabled: true,\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButton.args,\r\n    disabled: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "PrimaryButtonDisabledViolet",
@@ -526,7 +530,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...PrimaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButtonDisabled.args,\r\n    theme: 'violet',\r\n  },\r\n}"
                 },
                 {
                     "name": "PrimaryButtonViolet",
@@ -536,7 +540,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    theme: 'violet',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButton.args,\r\n    theme: 'violet',\r\n  },\r\n}"
                 },
                 {
                     "name": "SecondaryButton",
@@ -546,7 +550,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    variant: 'secondary',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButton.args,\r\n    variant: 'secondary',\r\n  },\r\n}"
                 },
                 {
                     "name": "SecondaryButtonDisabled",
@@ -556,7 +560,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...SecondaryButton.args,\n    disabled: true,\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...SecondaryButton.args,\r\n    disabled: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "SecondaryButtonDisabledViolet",
@@ -566,7 +570,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...SecondaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...SecondaryButtonDisabled.args,\r\n    theme: 'violet',\r\n  },\r\n}"
                 },
                 {
                     "name": "SecondaryButtonViolet",
@@ -576,7 +580,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...SecondaryButton.args,\n    theme: 'violet',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...SecondaryButton.args,\r\n    theme: 'violet',\r\n  },\r\n}"
                 },
                 {
                     "name": "TertiaryButton",
@@ -586,7 +590,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...PrimaryButton.args,\n    variant: 'tertiary',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...PrimaryButton.args,\r\n    variant: 'tertiary',\r\n  },\r\n}"
                 },
                 {
                     "name": "TertiaryButtonDisabled",
@@ -596,7 +600,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...TertiaryButton.args,\n    disabled: true,\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...TertiaryButton.args,\r\n    disabled: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "TertiaryButtonDisabledViolet",
@@ -606,7 +610,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...TertiaryButtonDisabled.args,\n    theme: 'violet',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...TertiaryButtonDisabled.args,\r\n    theme: 'violet',\r\n  },\r\n}"
                 },
                 {
                     "name": "TertiaryButtonViolet",
@@ -616,7 +620,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...TertiaryButton.args,\n    theme: 'violet',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...TertiaryButton.args,\r\n    theme: 'violet',\r\n  },\r\n}"
                 }
             ],
             "libs/storybook-host/src/lib/Molecules/input/input.component.stories.ts": [
@@ -628,7 +632,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<InputComponent>",
-                    "defaultValue": "{\n  component: InputComponent,\n}"
+                    "defaultValue": "{\r\n  component: InputComponent,\r\n}"
                 },
                 {
                     "name": "Multiline",
@@ -638,7 +642,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    multiline: true,\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...Primary.args,\r\n    multiline: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "MultilineDisabled",
@@ -648,7 +652,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    disabled: true,\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...Multiline.args,\r\n    disabled: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "MultilineDisabledWithLabel",
@@ -658,7 +662,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    label: 'Label 4',\n    id: '4',\n    disabled: true,\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...Multiline.args,\r\n    label: 'Label 4',\r\n    id: '4',\r\n    disabled: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "MultilineWithLabel",
@@ -668,7 +672,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...Multiline.args,\n    label: 'Label 3',\n    id: '3',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...Multiline.args,\r\n    label: 'Label 3',\r\n    id: '3',\r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -678,7 +682,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    multiline: false,\n    disabled: false,\n    label: '',\n    id: '',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    multiline: false,\r\n    disabled: false,\r\n    label: '',\r\n    id: '',\r\n  },\r\n}"
                 },
                 {
                     "name": "PrimaryDisabled",
@@ -688,7 +692,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    disabled: true,\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...Primary.args,\r\n    disabled: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "PrimaryDisabledWithLabel",
@@ -698,7 +702,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    label: 'Label 2',\n    id: '2',\n    disabled: true,\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...Primary.args,\r\n    label: 'Label 2',\r\n    id: '2',\r\n    disabled: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "PrimaryWithLabel",
@@ -708,7 +712,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    label: 'Label',\n    id: '1',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    ...Primary.args,\r\n    label: 'Label',\r\n    id: '1',\r\n  },\r\n}"
                 }
             ]
         },
@@ -741,13 +745,13 @@
                     "kind": 183
                 }
             ],
-            "libs/button/src/lib/button/button.component.ts": [
+            "libs/ui/button/src/lib/button/button.component.ts": [
                 {
                     "name": "Theme",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "\"blue\" | \"violet\"",
-                    "file": "libs/button/src/lib/button/button.component.ts",
+                    "file": "libs/ui/button/src/lib/button/button.component.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -758,7 +762,7 @@
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "\"primary\" | \"secondary\" | \"tertiary\"",
-                    "file": "libs/button/src/lib/button/button.component.ts",
+                    "file": "libs/ui/button/src/lib/button/button.component.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -769,27 +773,9 @@
     },
     "routes": [],
     "coverage": {
-        "count": 0,
+        "count": 1,
         "status": "low",
         "files": [
-            {
-                "filePath": "libs/button/src/lib/button/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 16,
-                "coverageCount": "1/6",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/input/src/lib/input/input.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "InputComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/6",
-                "status": "low"
-            },
             {
                 "filePath": "libs/storybook-host/.storybook/main.ts",
                 "type": "variable",
@@ -1018,6 +1004,24 @@
                 "name": "PrimaryWithLabel",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/button/src/lib/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 33,
+                "coverageCount": "2/6",
+                "status": "medium"
+            },
+            {
+                "filePath": "libs/ui/input/src/lib/input/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 16,
+                "coverageCount": "1/6",
                 "status": "low"
             }
         ]
